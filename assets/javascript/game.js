@@ -17,12 +17,10 @@ document.querySelector("#RemainingGuess").innerHTML = RemainingGuess; // here it
 document.querySelector("#losses_counter").innerHTML = losses;
 document.querySelector("#win_counter").innerHTML = win;
 
-
-
-
 // function starts below //
 document.onkeyup = function(event) {
   var UserGuess = event.key;
+
   AllUser_Guess.push(UserGuess);
   //
   // document.querySelector("#AllUser_Guess").innerHTML =AllUser_Guess;
@@ -30,30 +28,35 @@ document.onkeyup = function(event) {
   // below is for win //
   if (UserGuess === ComputerGuess) {
     win = win + 1;
-    RemainingGuess = 5;
+    reset_function();
     document.querySelector("#win_counter").innerHTML = win;
-    ComputerGuess = Computer_Choice_list[Math.floor(Math.random() * Computer_Choice_list.length)];
-    AllUser_Guess = [];
   }
 
   console.log(ComputerGuess);
   // below is for remaining guess and display letters //
   // also we are updating loss by +1
 
-
   // Decreasing remaining guess by 1
   if (RemainingGuess == 0) {
-    RemainingGuess = 5; // we are making it pick another
+   // we are making it pick another
     alert("Game restaring");
     losses = losses + 1;
-    document.querySelector("#losses_counter").innerHTML = losses;
-    AllUser_Guess = [];
-    ComputerGuess = Computer_Choice_list[Math.floor(Math.random() * Computer_Choice_list.length)]; // retarting the game
-
-
+    reset_function();
     // we are chanign the number //
   }
-  document.querySelector("#RemainingGuess").innerHTML = RemainingGuess;
-  document.querySelector("#AllUser_Guess").innerHTML = AllUser_Guess;
+  updateDom()
+
   // ----------------------------------------------------- //
 }
+function reset_function (){
+  RemainingGuess = 5;
+  AllUser_Guess = [];
+  ComputerGuess = Computer_Choice_list[Math.floor(Math.random() * Computer_Choice_list.length)]; // retarting the game
+}
+
+function updateDom ()
+{
+  document.querySelector("#losses_counter").innerHTML = losses;
+  document.querySelector("#RemainingGuess").innerHTML = RemainingGuess;
+  document.querySelector("#AllUser_Guess").innerHTML = AllUser_Guess;
+};

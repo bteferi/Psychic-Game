@@ -13,6 +13,8 @@ console.log(ComputerGuess);
 // this funcion is run when ever the user presses a key
 
 // here is the code shown at the start of the html - this will not update because it is not in the function//
+// This is just to show when the game starts and it doesnt get updated//
+
 document.querySelector("#RemainingGuess").innerHTML = RemainingGuess; // here it is not updating
 document.querySelector("#losses_counter").innerHTML = losses;
 document.querySelector("#win_counter").innerHTML = win;
@@ -38,7 +40,7 @@ document.onkeyup = function(event) {
 
   // Decreasing remaining guess by 1
   if (RemainingGuess == 0) {
-   // we are making it pick another
+    // we are making it pick another
     alert("Game restaring");
     losses = losses + 1;
     reset_function();
@@ -48,14 +50,14 @@ document.onkeyup = function(event) {
 
   // ----------------------------------------------------- //
 }
-function reset_function (){
+
+function reset_function() {
   RemainingGuess = 5;
   AllUser_Guess = [];
   ComputerGuess = Computer_Choice_list[Math.floor(Math.random() * Computer_Choice_list.length)]; // retarting the game
 }
 
-function updateDom ()
-{
+function updateDom() {
   document.querySelector("#losses_counter").innerHTML = losses;
   document.querySelector("#RemainingGuess").innerHTML = RemainingGuess;
   document.querySelector("#AllUser_Guess").innerHTML = AllUser_Guess;

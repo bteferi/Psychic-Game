@@ -2,13 +2,13 @@
 var win = 0;
 var losses = 0;
 var RemainingGuess = 5;
-var UserGuess = '';
+var UserGuess = ''; // this var will be called on dueing the event listner
 var AllUser_Guess = [];
 var Computer_Choice_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var ComputerGuess = Computer_Choice_list[Math.floor(Math.random() * Computer_Choice_list.length)];
 console.log(ComputerGuess);
-// 2.0 Problem How do I get users guess
-//2.0 I need an event listner to get users input
+
+
 //using key presse info in to variable for later use
 // this funcion is run when ever the user presses a key
 
@@ -19,17 +19,23 @@ document.querySelector("#RemainingGuess").innerHTML = RemainingGuess; // here it
 document.querySelector("#losses_counter").innerHTML = losses;
 document.querySelector("#win_counter").innerHTML = win;
 
+
+
+// 2.0 Problem How do I get users guess
+//2.0 I need an event listner to get users input
 // function starts below //
 document.onkeyup = function(event) {
   var UserGuess = event.key;
 
   AllUser_Guess.push(UserGuess);
   //
-  // document.querySelector("#AllUser_Guess").innerHTML =AllUser_Guess;
+
   RemainingGuess = RemainingGuess - 1;
   // below is for win //
   if (UserGuess === ComputerGuess) {
     win = win + 1;
+    // alert("Score");
+
     reset_function();
     document.querySelector("#win_counter").innerHTML = win;
   }

@@ -5,4 +5,6 @@ body{
 }
 .gamebox{
   color:red;
+  background-color:pink;
+  width:50%;
 }

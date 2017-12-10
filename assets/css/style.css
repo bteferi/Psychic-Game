@@ -1,10 +1,10 @@
 body{
   background-color: black;
-  color:red;
+  color:blue;
   text-align: center;
 }
 .gamebox{
-  color:red;
-  background-color:pink;
+  color:blue;
   width:50%;
+  height:50%;
 }

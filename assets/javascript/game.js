@@ -10,7 +10,7 @@ console.log(ComputerGuess);
 
 //using key presse info in to variable for later use
 // this funcion is run when ever the user presses a key
-// 
+//
 // here is the code shown at the start of the html - this will not update because it is not in the function//
 // This is just to show when the game starts and it doesnt get updated//
 
@@ -33,7 +33,7 @@ document.onkeyup = function(event) {
   // below is for win //
   if (UserGuess === ComputerGuess) {
     win = win + 1;
-    // alert("Score");
+  alert("Grate Job: Brook Samuel");
 
     reset_function();
     document.querySelector("#win_counter").innerHTML = win;
@@ -46,7 +46,7 @@ document.onkeyup = function(event) {
   // Decreasing remaining guess by 1
   if (RemainingGuess == 0) {
     // we are making it pick another
-    alert("Game restaring");
+    alert("C'mon man! U can do better!");
     losses = losses + 1;
     reset_function();
     // we are chanign the number //

@@ -1,7 +1,7 @@
 body{
-  background-color: black;
   color:blue;
   text-align: center;
+   background:url("../images/ep_naturalblack.png");
 }
 .gamebox{
   color:blue;

@@ -25,7 +25,7 @@ document.querySelector("#win_counter").innerHTML = win;
 // function starts below //
 document.onkeyup = function(event) {
   var UserGuess = event.key;
-
+    alert("Welcome Mariamawit" );
   AllUser_Guess.push(UserGuess);
   //
 
@@ -33,7 +33,7 @@ document.onkeyup = function(event) {
   // below is for win //
   if (UserGuess === ComputerGuess) {
     win = win + 1;
-  alert("Grate Job: Brook Samuel");
+  alert("SCORE!");
 
     reset_function();
     document.querySelector("#win_counter").innerHTML = win;

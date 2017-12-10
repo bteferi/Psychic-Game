@@ -8,10 +8,9 @@ var Computer_Choice_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k
 var ComputerGuess = Computer_Choice_list[Math.floor(Math.random() * Computer_Choice_list.length)];
 console.log(ComputerGuess);
 
-
 //using key presse info in to variable for later use
 // this funcion is run when ever the user presses a key
-
+// 
 // here is the code shown at the start of the html - this will not update because it is not in the function//
 // This is just to show when the game starts and it doesnt get updated//
 

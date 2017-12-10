@@ -4,31 +4,71 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous'>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Psychic-Game</title>
 </head>
 
 <body>
-  <div class="wrapper">
-  <h1> The Psychic-Game </h1>
+<div class="gamebox">
+  <div class='container'>
+    <div class='jumbotron'>
+      <div class='container'>
+        <h1>The Psychic-Game</h1>
+        <h2>Guess a letter !</h2>
+        <small>Click any letter to begin...</small>
+      </div>
+    </div>
+
+      <!-- <span> for win counter</span> -->
+<div class='container '>
+        <div class='panel panel-default'>
+        <div class="panel-heading">
+          Wins :
+        </div>
+        <ul class="list-group list-group-flush text-primary">
+          <h3 class="list-group-item"><span id="win_counter"> </span> </h3>
+        </ul>
+      </div>
+
+      <!--Loss counter   -->
+
+      <div class='panel panel-default'>
+      <div class="panel-heading">
+          Loses:
+        </div>
+        <ul class="list-group list-group-flush text-primary">
+          <h3 class="list-group-item"><span id="losses_counter"> </span></h3>
+        </ul>
+      </div>
+
+      <!--remaining guess is going to be a number that decreases everytime a user touches a key  -->
+      <div class='panel panel-default'>
+      <div class="panel-heading">
+          Remaining Guess :
+        </div>
+        <ul class="list-group list-group-flush text-primary">
+          <h3 class="list-group-item"><span id="RemainingGuess"></span></h3>
+        </ul>
+      </div>
+      <!-- User guess needs to be a list of words the user already guessed  -->
+
+      <div class='panel panel-default'>
+      <div class="panel-heading">
+          Your Guess so far:
+        </div>
+        <ul class="list-group list-group-flush text-primary">
+          <h3 class="list-group-item"><span id="AllUser_Guess"> </span> </h3>
+        </ul>
+      </div>
 
 
-  <div class="gamebox">
-      <span id="myImage"></span>
-    <p> Guess what letter I'm thinking of </p>
+</div>
 
-    <p> Wins : <span id="win_counter"> </span> </p>
-
-    <p> Loses: <span id="losses_counter"> </span> </p>
-
-    <p> Remaining Guess : <span id="RemainingGuess"></span></p>
-    <!--remaining guess is going to be a number that decreases everytime a user touches a key  -->
-    <p>Your Guess so far: <span id="AllUser_Guess"> </span> </p>
-    <!-- User guess needs to be a list of words the user already guessed  -->
   </div>
-
   <script src="assets/javascript/game.js">
   </script>
+  </div>
 </div>
 </body>
 

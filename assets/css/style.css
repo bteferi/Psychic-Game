@@ -5,6 +5,7 @@ body{
 }
 .gamebox{
   color:blue;
-  width:50%;
-  height:50%;
+  width:40%;
+  height:30%;
+  padding-left:7%;
 }
